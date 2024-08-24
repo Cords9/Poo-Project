@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Gerente extends Funcionario implements MostrarInfos,Gerenciar{
+public class Gerente extends Funcionario implements MostrarInfos{
 
 
     private ArrayList<Atendente> atendentesContratados = new ArrayList<>();
@@ -46,7 +46,7 @@ public class Gerente extends Funcionario implements MostrarInfos,Gerenciar{
     }
 
 
-    @Override
+
     public void relatorio(Estacionamento estacionamento) {
         System.out.println("Atualmente "+ atendentesContratados.size()+ " Atendente(s) trabalham no estacionamento:");
         for (Atendente x: atendentesContratados){

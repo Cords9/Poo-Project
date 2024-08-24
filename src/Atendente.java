@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Atendente extends Funcionario implements Reserva {
+public class Atendente extends Funcionario {
 
     Log registros = new Log();
 
@@ -14,7 +14,7 @@ public class Atendente extends Funcionario implements Reserva {
     public Atendente() throws IOException {
     }
 
-    @Override
+
     public void reservarVaga(Patio patio) throws InvalidPortasException, VagasIndisponiveisException, IOException {
         Veiculo veiculo = null;
         Vagas vaga = null;
@@ -115,7 +115,7 @@ public class Atendente extends Funcionario implements Reserva {
 
     }
 
-    @Override
+
     public void liberarVaga(Patio patio) throws IOException {
 
         boolean verificaVaga=false;

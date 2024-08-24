@@ -21,7 +21,13 @@ public class Log {
         FileReader fr = new FileReader(path);
         BufferedReader leitura = new BufferedReader(fr);
 
-        System.out.println(leitura.readLine());
+        String linhas;
+
+        while ((linhas = leitura.readLine()) != null){
+            System.out.println(linhas);
+
+        }
+
 
     }
 
