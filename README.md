@@ -8,7 +8,7 @@
 - [Diagrama de Classes](#-diagrama-de-classes)
 - [Como Executar](#-como-executar)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Exceções Personalizadas](#-exceções-personalizadas)
+- [Exceções Personalizadas](#exceções-personalizadas)
 - [Logs do Sistema](#-logs-do-sistema)
 - [Licença](#-licença)
 
@@ -154,9 +154,8 @@ public class PortasInvalidasException extends Exception {
 
 ### VagasIndisponiveisException
 ```java
-/**
  * Lançada quando a vaga escolhida já está ocupada
- */
+
 public class VagasIndisponiveisException extends Exception {
     public VagasIndisponiveisException() {
         super("Não há vagas disponíveis");
@@ -166,9 +165,8 @@ public class VagasIndisponiveisException extends Exception {
 
 ### IdTwinException
 ```java
-/**
  * Lançada ao tentar cadastrar um ID duplicado
- */
+
 public class IdTwinException extends Exception {
     public IdTwinException() {
         super("ID já está em uso");
@@ -178,9 +176,9 @@ public class IdTwinException extends Exception {
 
 ### AtendentesInsuficientesException
 ```java
-/**
+
  * Lançada quando não há atendentes cadastrados para operar o sistema
- */
+
 public class AtendentesInsuficientesException extends Exception {
     public AtendentesInsuficientesException() {
         super("Nenhum atendente cadastrado");
