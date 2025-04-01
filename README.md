@@ -54,22 +54,31 @@ public class Carro extends Veiculo {
 
 ## 🚀 Como Executar
 
-1. **Pré-requisitos**:
+### 1. **Pré-requisitos**:
    - JDK 17+ instalado
    - Terminal/CLI configurado
 
-2. **Passo a passo**:
+### 2. **Passo a Passo**:
+
+- **Clone o repositório**:
+
+  ```bash
+  git clone https://github.com/Cords9/Poo-Project.git
+  ```
+
+- **Acesse o diretório**
+
 ```bash
-# Clone o repositório
-git clone https://github.com/Cords9/Poo-Project.git
-
-# Acesse o diretório
 cd estacionamento-poo
+```
 
-# Compile o projeto
+- **Compile o projeto**
+```bash
 javac -encoding UTF-8 src/Main.java src/model/*.java src/funcionarios/*.java
+```
 
-# Execute o sistema
+-  **Execute o sistema**
+```bash
 java -cp src Main
 ```
 
