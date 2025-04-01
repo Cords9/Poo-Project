@@ -140,3 +140,113 @@ public class PortasInvalidasException extends Exception {
         super("Número de portas inválido. Deve ser 2 ou 4");
     }
 }
+```
+
+
+### VagasIndisponiveisException
+```java
+/**
+ * Lançada quando a vaga escolhida já está ocupada
+ */
+public class VagasIndisponiveisException extends Exception {
+    public VagasIndisponiveisException() {
+        super("Não há vagas disponíveis");
+    }
+}
+```
+
+### IdTwinException
+```java
+/**
+ * Lançada ao tentar cadastrar um ID duplicado
+ */
+public class IdTwinException extends Exception {
+    public IdTwinException() {
+        super("ID já está em uso");
+    }
+}
+```
+
+### AtendentesInsuficientesException
+```java
+/**
+ * Lançada quando não há atendentes cadastrados para operar o sistema
+ */
+public class AtendentesInsuficientesException extends Exception {
+    public AtendentesInsuficientesException() {
+        super("Nenhum atendente cadastrado");
+    }
+}
+
+```
+
+
+## 📝 Logs do Sistema
+
+### 🌜 Sobre
+O sistema gera automaticamente um arquivo de log chamado `L0gEstacionamento.txt` na raiz do projeto, registrando todas as operações importantes.
+
+### 🔍 Como Visualizar
+1. No menu do gerente, abra a aba **"Logs"**
+2. Ou acesse diretamente o arquivo `L0gEstacionamento.txt` na pasta do programa
+
+### 📋 Formato dos Registros
+Cada linha segue o padrão:
+
+```txt
+[ MENSAGEM ]
+```
+
+Exemplo real:
+
+```txt
+Carro Renault Sandero estacionado na vaga 5
+
+O gerente Marcos entrou no sistema
+
+Novo atendente registrado no sistema: ||Atendente- Souza||ID- 1||CPF- 091-254-214-21||
+
+Atendentes registrados no estacionamento- [||Atendente- Souza||ID- 1||CPF- 091-254-214-21||]
+
+O gerente Marcos saiu do sistema
+
+O Atendente Souza entrou no sistema
+
+Um Carro entrou no estacionamento- Carro || marca : Fiat|| modelo : Palio|| placa : faz-q214|| Cor : Azul|| Número de portas : 4 ||
+
+O atendente Souza saiu do sistema
+```
+
+### 📌 O que é Registrado
+- Entrada/saída de veículos
+- Logins de atendentes
+- Erros do sistema
+- Operações administrativas
+- Alertas importantes
+
+
+
+## 📜 Licença
+
+### MIT License
+
+```plaintext
+Copyright (c) 2023 Diego Cordeiro
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
