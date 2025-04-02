@@ -1,6 +1,16 @@
+package funcionario;
+
+import estacionamento.Patio;
 import exceptions.IdTwinException;
 import exceptions.InvalidPortasException;
 import exceptions.VagasIndisponiveisException;
+import monitoramento.Log;
+import vaga.Vagacarro;
+import vaga.Vagamoto;
+import vaga.Vagas;
+import veiculos.Carro;
+import veiculos.Moto;
+import veiculos.Veiculo;
 
 import java.io.IOException;
 import java.util.Scanner;

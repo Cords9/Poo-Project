@@ -1,3 +1,7 @@
+package vaga;
+
+import veiculos.Veiculo;
+
 import java.util.ArrayList;
 
 public class Vagacarro extends Vagas {

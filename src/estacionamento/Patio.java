@@ -1,3 +1,8 @@
+package estacionamento;
+
+import monitoramento.MostrarInfos;
+import vaga.Vagas;
+
 import javax.swing.*;
 import java.util.ArrayList;
 

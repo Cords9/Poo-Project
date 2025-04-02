@@ -1,7 +1,12 @@
+import estacionamento.Estacionamento;
+import estacionamento.Patio;
 import exceptions.AtendentesInsuficientesExceptions;
 import exceptions.IdTwinException;
 import exceptions.InvalidPortasException;
 import exceptions.VagasIndisponiveisException;
+import funcionario.Atendente;
+import funcionario.Gerente;
+import monitoramento.Log;
 
 import java.io.IOException;
 import java.util.Scanner;

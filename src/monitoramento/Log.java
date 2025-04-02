@@ -1,3 +1,5 @@
+package monitoramento;
+
 import java.io.*;
 import java.util.Scanner;
 

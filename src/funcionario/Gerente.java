@@ -1,7 +1,13 @@
+package funcionario;
+
+import estacionamento.Estacionamento;
+import estacionamento.Patio;
+import monitoramento.MostrarInfos;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Gerente extends Funcionario implements MostrarInfos{
+public class Gerente extends Funcionario implements MostrarInfos {
 
 
     private ArrayList<Atendente> atendentesContratados = new ArrayList<>();
