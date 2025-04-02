@@ -1,6 +1,0 @@
-O gerente Marcos entrou no sistema .
-O gerente Marcos saiu do sistema .
-O gerente Marcos entrou no sistema .
-Novo atendente registrado no sistema: ||Atendente- klayver pow||ID- 1||CPF- 024-658-531-23||
-Atendentes registrados no estacionamento- [||Atendente- klayver pow||ID- 1||CPF- 024-658-531-23||]
-O gerente Marcos saiu do sistema .

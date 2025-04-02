@@ -1,3 +1,7 @@
+import exceptions.IdTwinException;
+import exceptions.InvalidPortasException;
+import exceptions.VagasIndisponiveisException;
+
 import java.io.IOException;
 import java.util.Scanner;
 

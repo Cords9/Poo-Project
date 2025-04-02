@@ -1,4 +1,8 @@
-import javax.swing.*;
+import exceptions.AtendentesInsuficientesExceptions;
+import exceptions.IdTwinException;
+import exceptions.InvalidPortasException;
+import exceptions.VagasIndisponiveisException;
+
 import java.io.IOException;
 import java.util.Scanner;
 
