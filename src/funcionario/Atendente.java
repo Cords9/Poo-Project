@@ -105,13 +105,13 @@ public class Atendente extends Funcionario {
             }
 
             for (Vagas v : patio.getVagas()) {
-                if (v.getIdVaga() == idVaga && (v.ocupada == true)) {
+                if (v.getIdVaga() == idVaga && (v.isOcupada() == true)) {
                     throw new IdTwinException("O id da vaga selecionada ja esta preenchido !!");
                 }
             }
-            vaga.idVaga = idVaga;
-            vaga.veiculo = veiculo;
-            vaga.ocupada = true;
+            vaga.setIdVaga(idVaga);
+            vaga.setVeiculo(veiculo);
+            vaga.setOcupada(true);
             System.out.println("Veiculo estacionado com sucesso.");
 
             if (patio.getVagasDisponiveis() <= 0) {
@@ -135,7 +135,7 @@ public class Atendente extends Funcionario {
         boolean verificaVaga=false;
 
         for (Vagas vaga : patio.getVagas()){
-            if (vaga.ocupada==true){
+            if (vaga.isOcupada() ==true){
                 verificaVaga=true;
             }
         }
@@ -152,12 +152,12 @@ public class Atendente extends Funcionario {
             Veiculo veiculo = vaga.getVeiculo();
             if (veiculo instanceof Carro) {
                 Carro carro = (Carro) veiculo;
-                System.out.println("|| Id da vaga: " + vaga.idVaga + "|| Tipo de veiculo: Carro||" + " Marca: " + carro.marca + "|| Modelo: " + carro.modelo + " || Numero de portas: " + carro.getNumPortas() + " || Cor do carro: " + carro.cor + " || Placa- " + carro.placa + " ||");
+                System.out.println("|| Id da vaga: " + vaga.getIdVaga() + "|| Tipo de veiculo: Carro||" + " Marca: " + carro.getMarca() + "|| Modelo: " + carro.getModelo() + " || Numero de portas: " + carro.getNumPortas() + " || Cor do carro: " + carro.getCor() + " || Placa- " + carro.getPlaca() + " ||");
 
 
             } else {
                 Moto moto = (Moto) veiculo;
-                System.out.println("|| Id da vaga: " + vaga.idVaga + " || Tipo de veiculo: Moto" + " || Marca: " + moto.marca + " || Modelo: " + moto.modelo + " || Cor: " + moto.cor + " || Placa: " + moto.placa + " ||");
+                System.out.println("|| Id da vaga: " + vaga.getIdVaga() + " || Tipo de veiculo: Moto" + " || Marca: " + moto.getMarca() + " || Modelo: " + moto.getModelo() + " || Cor: " + moto.getCor() + " || Placa: " + moto.getPlaca() + " ||");
             }
         }
 
@@ -174,7 +174,7 @@ public class Atendente extends Funcionario {
             Vagas vagaRemovida = null;
 
             for (Vagas v : patio.getVagas()){
-                if (v.idVaga == removeVaga && (v.ocupada==true)){
+                if (v.getIdVaga() == removeVaga && (v.isOcupada() ==true)){
                     vagaRemovida=v;
 
                 }
