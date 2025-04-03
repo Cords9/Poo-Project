@@ -1,3 +1,7 @@
+package vaga;
+
+import veiculos.Veiculo;
+
 public abstract class Vagas {
     protected int idVaga;
     protected boolean ocupada;

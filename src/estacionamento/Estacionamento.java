@@ -1,3 +1,7 @@
+package estacionamento;
+
+import monitoramento.MostrarInfos;
+
 import java.util.ArrayList;
 
 public class Estacionamento implements MostrarInfos {

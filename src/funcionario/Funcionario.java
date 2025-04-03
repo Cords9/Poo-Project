@@ -1,3 +1,5 @@
+package funcionario;
+
 public abstract class Funcionario {
     protected int id;
     protected String nome;

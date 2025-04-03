@@ -1,3 +1,8 @@
+package estacionamento;
+
+import monitoramento.MostrarInfos;
+import vaga.Vagas;
+
 import javax.swing.*;
 import java.util.ArrayList;
 
@@ -37,7 +42,7 @@ public class Patio implements MostrarInfos {
     @Override
     public void exibirInfos() {
         for (int i = 0; i < vagas.size(); i++) {
-            System.out.println("Vaga " + vagas.get(i).idVaga + ": " + vagas.get(i).getVeiculo());
+            System.out.println("Vaga " + vagas.get(i).getIdVaga() + ": " + vagas.get(i).getVeiculo());
         }
 
     }

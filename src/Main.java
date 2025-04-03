@@ -1,4 +1,13 @@
-import javax.swing.*;
+import estacionamento.Estacionamento;
+import estacionamento.Patio;
+import exceptions.AtendentesInsuficientesExceptions;
+import exceptions.IdTwinException;
+import exceptions.InvalidPortasException;
+import exceptions.VagasIndisponiveisException;
+import funcionario.Atendente;
+import funcionario.Gerente;
+import monitoramento.Log;
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -48,7 +57,7 @@ public class Main {
 
                         System.out.println("Escolha o atendente:");
                         for (int i = 0; i < gerente.getAtendentesContratados().size(); i++) {
-                            System.out.println((i + 1) + "||" + gerente.getAtendentesContratados().get(i).nome);
+                            System.out.println((i + 1) + "||" + gerente.getAtendentesContratados().get(i).getNome());
                         }
                         int escolhaAtendente = input.nextInt();
                         input.nextLine();
@@ -59,8 +68,8 @@ public class Main {
                             System.out.println("Escolha invalida!!");
                         } else {
 
-                            System.out.println("Bem-Vindo " + oAtendente.nome + "!!");
-                            registros.registrarLog("O Atendente "+oAtendente.nome+ " entrou no sistema");
+                            System.out.println("Bem-Vindo " + oAtendente.getNome() + "!!");
+                            registros.registrarLog("O Atendente "+ oAtendente.getNome() + " entrou no sistema");
                         }
                     while (true) {
                         System.out.println("---------Menu do atendente---------");
@@ -157,7 +166,7 @@ public class Main {
                             }
                         }
                         if (escolhaMenuAt==5){
-                            registros.registrarLog("O atendente "+oAtendente.nome+" saiu do sistema");
+                            registros.registrarLog("O atendente "+ oAtendente.getNome() +" saiu do sistema");
                             break;
 
                         }
@@ -175,8 +184,8 @@ public class Main {
 
 
                 if (escolhaUsuario == 2) {
-                    System.out.println("Seja bem-vindo " + gerente.nome + " .");
-                    registros.registrarLog("O gerente "+gerente.nome+" entrou no sistema .");
+                    System.out.println("Seja bem-vindo " + gerente.getNome() + " .");
+                    registros.registrarLog("O gerente "+ gerente.getNome() +" entrou no sistema .");
 
                     while (true) {
                         System.out.println("----------Menu do gerente----------");
@@ -203,7 +212,7 @@ public class Main {
 
 
                             for (Atendente x : gerente.getAtendentesContratados()){
-                                if (x.id== novoatendente.id){
+                                if (x.getId() == novoatendente.getId()){
                                     jaContratado=true;
                                     try {
                                         throw new IdTwinException("Não possivel realizar o cadastro. Ja existe um usuario com esse id!");
@@ -242,7 +251,7 @@ public class Main {
                             registros.visualizarLog();
                         }
                         if (escolhaGerente == 6) {
-                            registros.registrarLog("O gerente "+gerente.nome+" saiu do sistema .");
+                            registros.registrarLog("O gerente "+ gerente.getNome() +" saiu do sistema .");
                             break;
                         }
                     }

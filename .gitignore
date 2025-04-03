@@ -15,6 +15,9 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
+L0gEstacionamento.txt
+
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
